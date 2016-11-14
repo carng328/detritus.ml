@@ -1,0 +1,106 @@
+	@font-face {
+		font-family: Univers-Bold;
+	    src: url(../fonts/Univers_CE_65_Bold.ttf);
+	}
+
+	@font-face {
+		font-family: Univers-Light;
+	    src: url(../fonts/Univers_CE_45_Light.ttf);
+	}
+
+	body{
+		font-family: Univers-Bold;
+		font-size: 25pt;
+		padding:0; 
+		margin:0 0 0 50%;
+		width:50%; 
+		min-height:100%; 
+		float:right;
+		overflow-y: hidden; 
+		overflow-x: hidden; 
+	}
+	a{
+		text-decoration: none;
+		color: rgb(250,250,250);
+		cursor: pointer;
+	}
+	#white{
+		background-color: rgb(250,250,250);
+		color: black;
+		float:left; 
+		width:100%; 
+		height: 100%;
+		margin-left:-100%; 
+		text-align:center; 
+		overflow: scroll;
+		z-index: -10;
+		display: table;
+		overflow: hidden;
+
+	}
+	#white-inner{
+		display: table-cell; 
+		vertical-align: middle;
+
+	}
+
+
+	#black{
+		color: rgb(250,250,250);
+		background-color: black;
+		height: 100%;
+		overflow: scroll;
+		z-index: 10;
+	}
+
+	#black-inner{
+		padding-top:30px;
+		padding-left: 15px; 
+		
+	}
+
+	#location{
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 15px;
+		font-size: 12pt;
+	}
+
+	 #date{
+		position: fixed;
+		top: 20;
+		left: 0;
+		padding: 15px;
+		font-size: 12pt;
+	}
+
+	#ip{
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		padding: 15px;
+		font-size: 12pt;
+		color: white;
+	}
+
+	.content{
+		padding-bottom: 8;
+	}
+
+	.nesting-1, .nesting-2{
+		cursor: pointer;
+		display: none;
+		position: absolute;
+		background-color: rgb(250,250,250);
+		padding: 15px;
+		z-index: 10;
+		font-size: 15;
+		color: blue;
+		-webkit-box-shadow: 7px 7px 5px -4px blue;
+		-moz-box-shadow: 7px 7px 5px -4px blue;
+		box-shadow: 7px 7px 5px -4px blue;
+		border-style: solid;
+	    border-color: blue;
+	    border-width: thin;
+	}
