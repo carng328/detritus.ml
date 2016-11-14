@@ -76,7 +76,31 @@
 			<div class="nesting-2">
 				Trump wins Arizona, picks up 11 more electoral votes
 			</div>
-
+	<!-- NESTING-4 -->
+			<div class="nesting-3">
+			Russell Simmons Pens Open Letter to Donald Trump and America
+			</div>
+			<div class="nesting-3">
+				Russell Simmons aiding digital diversity
+			</div>
+			<div class="nesting-3">
+				Russell Simmons Says Donald Trump’s Slogan Could Be ‘Make America Racist Again’
+			</div>
+			<div class="nesting-3">
+				Russell Simmons helps out for Give Miami Day
+			</div>
+			<div class="nesting-3">
+				Russell Simmons Sends Sternly-Worded Prayer To 'Old Friend' Donald Trump
+			</div>
+			<div class="nesting-3">
+				Russell Simmons to Trump: “You Cannot Target a Religious Group of People”
+			</div>
+			<div class="nesting-3">
+				Russell Simmons writes open letter to Donald Trump
+			</div>
+			<div class="nesting-3">
+				Russell Simmons pens another open letter for Trump
+			</div>
 	<div id="white">
 		<div id="white-inner">
 			donald trump
@@ -92,7 +116,7 @@
 				<a href="#" id="2">trump wins</a>
 			</div>
 			<div class="content">
-				<a href="#">russel simmons</a>
+				<a href="#" id="3">russel simmons</a>
 			</div>
 			<div class="content">
 				<a href="#">leon russel</a>
@@ -139,6 +163,24 @@
 			<div class="content">
 				<a href="#">nafta</a>
 			</div>
+			<div class="content">
+				<a href="#">steve bannon</a>
+			</div>
+			<div class="content">
+				<a href="#">barron trump</a>
+			</div>
+			<div class="content">
+				<a href="#">60 minutes</a>
+			</div>
+			<div class="content">
+				<a href="#">trump protests</a>
+			</div>
+			<div class="content">
+				<a href="#">paul ryan</a>
+			</div>
+			<div class="content">
+				<a href="#">ben carson</a>
+			</div>
 		</div>
 	</div>
 	<div style="clear:both"></div>
@@ -165,14 +207,16 @@
 		
 			</div> -->
 <script type="text/javascript">
-$('.nesting-1, .nesting-2').draggable();
 
-$('.nesting-1, .nesting-2').each(function(i,el){
-    var tLeft = Math.floor(Math.random()*200),
-        tTop  = Math.floor(Math.random()*200),
-        bgcol = '#' + Math.floor(Math.random()*99)
-                    + Math.floor(Math.random()*99)
-                    + Math.floor(Math.random()*99);
+
+$('.nesting-1, .nesting-2, .nesting-3').draggable();
+
+$('.nesting-1, .nesting-2, .nesting-3').each(function(i,el){
+    var tLeft = Math.floor(Math.random()*500),
+        tTop  = Math.floor(Math.random()*500),
+        bgcol = '#' + Math.floor(Math.random()*200)
+                    + Math.floor(Math.random()*200)
+                    + Math.floor(Math.random()*200);
     $(el).css({left: tLeft, top: tTop});
 });
 
@@ -182,58 +226,47 @@ $.get("http://ipinfo.io", function (response) {
     $("#details").html(JSON.stringify(response, null, 4));
 }, "jsonp");
 
-//SHOW DIVS ONE AT A TIME
-animateNext($('table tr td'));
-
-function animateNext(items) {
-    items.eq(0).animate({opacity: 1}, 300, function() {
-        animateNext(items.slice(1));
-    });
-}
-
-
 //DATE
 var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth()+1; //January is 0!
 
-var yyyy = today.getFullYear();
-if(dd<10){
-    dd='0'+dd
-} 
-if(mm<10){
-    mm='0'+mm
-} 
+	var yyyy = today.getFullYear();
+	if(dd<10){
+	    dd='0'+dd
+	} 
+	if(mm<10){
+	    mm='0'+mm
+	} 
 var today = dd+'/'+mm+'/'+yyyy;
 document.getElementById("date").value = today;
 
-//SHOW NESTING-1
-
-function animateNext(items) {
-    items.eq(0).animate({
-        opacity: 1
-    }, 300, function() {
-        if (items.length == 1) {
-            $('ul.cover').fadeOut();
-        } else {
-          animateNext(items.slice(1));
-        }
-    });
-}
-
+//SHOW NESTING
 $(function() {
-       $('#1').click(function() {
-           $('.nesting-1').show();
-           return false;
-       });        
+	$('#1').click(function() {
+		$('.nesting-1').each(function(i) {
+		    $(this).hide().delay(i * 1000).show(20);
+		});
+     });
    });
 
 $(function() {
-       $('#2').click(function() {
-           $('.nesting-2').show();
-           return false;
-       });        
+	$('#2').click(function() {
+		$('.nesting-2').each(function(i) {
+		    $(this).hide().delay(i * 1000).show(20);
+		});
+     });
    });
+
+$(function() {
+	$('#3').click(function() {
+		$('.nesting-3').each(function(i) {
+		    $(this).hide().delay(i * 1000).show(20);
+		});
+     });
+   });
+
+//COOKIE
 
 
 </script>
