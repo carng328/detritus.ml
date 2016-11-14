@@ -54,7 +54,7 @@
 	}
 
 	#black-inner{
-		padding-top:30px;
+		padding-top:15px;
 		padding-left: 15px; 
 		
 	}
@@ -88,7 +88,7 @@
 		padding-bottom: 8;
 	}
 
-	.nesting-1, .nesting-2, .nesting-3{
+	.nesting-1, .nesting-2, .nesting-3, .nesting-4{
 		cursor: pointer;
 		display: none;
 		position: absolute;
